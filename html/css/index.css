@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+li {
+  list-style: none;
+}
+.head .head-head {
+  width: 100%;
+  background: #f2f2f2;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+}
+.head .head-head ul {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.head .head-head ul li {
+  float: left;
+}
+.head .head-head ul .f-r {
+  float: right;
+}
