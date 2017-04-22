@@ -42,7 +42,7 @@
 				<router-link to='/product'><div>财税服务</div></router-link>	 
 				<router-link to='/provider'><div>公司工商</div></router-link>
 				<router-link to='/joinus'><div>加盟我们</div></router-link>
-				<div>店铺</div>
+				<router-link to='/shoplist'><div>店铺</div></router-link>
 			</div>
 		</div>
 		

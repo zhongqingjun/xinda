@@ -18,17 +18,11 @@
 				<div class='servearea'>
 					<div class="servetitle"><p>服务区域</p></div>
 					<div class="areaname">
-						<div class="area">
-							<select name="" id="">
-								<option value="北京">北京</option>
-							</select>
-							<select name="" id="">
-								<option value="北京市">北京市</option>
-							</select>
-							<select name="" id="">
-								<option value="海淀区">海淀区</option>
-							</select>
-						</div>
+						<v-distpicker class="area">
+							<select ></select>
+							<select ></select>
+							<select ></select>
+						</v-distpicker>
 					</div>
 				</div>
 			</div>
@@ -69,6 +63,7 @@
 
 <script type="text/javascript">
 	import axios from 'axios'
+	import Distpicker from 'v-distpicker'
 	export default {
 		created(){
 
@@ -136,13 +131,7 @@
 		}
 	}
 </script>
-
-
-
-
-
-
-<style lang='less' scope>
+<style lang='less' scoped>
 	.body {
 		width: 1200px;
 		margin: 0 auto;
@@ -165,7 +154,7 @@
 					font-weight: 600;
 					width: 98px;
 					float: left;
-					border-right: 1px solid #ccc;
+					/*border-right: 1px solid #ccc;*/
 				}
 				.servetype {
 					font-size: 14px;
@@ -173,8 +162,9 @@
 					border: 1px solid #ccc;
 					margin: auto;
 					.typenum {
-						padding: 12px 0;
+						padding: 14px 0;
 						float: left;
+						border-left: 1px solid #ccc;
 						.typenum-span {
 							background: #2693d4;
 							border-radius:6px;
@@ -192,8 +182,10 @@
 					border-left: 1px solid #ccc;
 					border-right: 1px solid #ccc;
 					.contentnum {
-						padding: 12px 0;
+						padding: 14px 0;
+						height: 23px;
 						float: left;
+						border-left: 1px solid #ccc;
 						.contentnum-span {
 							background: #2693d4;
 							border-radius:6px;
@@ -210,15 +202,16 @@
 					overflow: hidden;
 					border: 1px solid #ccc;
 					.areaname {
-						padding: 12px 0;
+						padding: 14px 0;
 						float: left;
+						border-left: 1px solid #ccc;
 						.area {
 							margin-left: 29px;
-			
 							select {
 								height: 23px;
-								width: 75px;
+								/*width: 75px;*/
 								border: 1px solid #ccc;
+								padding: 0;
 							}
 						}
 					}
@@ -226,7 +219,7 @@
 			}
 			.product-content {
 				margin-top: 25px;
-				border: 1px solid #CCCCCC;
+				border: 1px solid #CCC;
 				.column {
 					.column-menu {
 						border-bottom: 1px solid #ccc;

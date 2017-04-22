@@ -4,25 +4,14 @@
 		<dl>
 			<dt>服务区域</dt>
 			<dd>
-				<select name="sheng">
-					<option value="">省</option>
-					<option value="">北京</option>
-					<option value="">天津</option>
-					<option value="">河北</option>
-				</select>
-				<select name="shi" class="shi">
-					<option value="">市</option>
-					<option value="">北京市</option>
-					<option value="">石家庄市</option>
-				</select>
-				<select name="qu" class="qu">
-					<option value="">区</option>
-					<option value="">海淀区</option>
-					<option value="">朝阳区</option>
-				</select>
+				<v-distpicker class="area">
+					<select name="sheng"></select>
+					<select name="shi" class="shi"></select>
+					<select name="qu" class="qu"></select>
+				</v-distpicker>
 			</dd>
 		</dl>
-		<dl>
+		<dl class="product-style">
 			<dt>产品类型</dt>
 			<dd>
 				<ul>
@@ -68,6 +57,7 @@
 	import axios from "axios"
 	import vue from "vue"
 	import vuex from "vuex"
+	import Distpicker from 'v-distpicker'
 	export default {
 		created(){
 			
@@ -135,7 +125,7 @@
 			},
 			enter(company) {
 				this.$router.push({
-					name: "jump",
+					name: "jump2",
 					params:	{
 						id:company.id,
 						name: company.regionName,
@@ -185,14 +175,16 @@
 			dd {
 				float: left;
 				height: 100%;
-				select {
-					border: 1px solid #CBCBCB;
-					width: 88px;
-					margin: 10px 0 10px 12px;
-					height: 27px;
-					float: left;
-					margin-bottom: 25px;
+				.area {
+					select {
+						border: 1px solid #ccc;
+						width: 88px;
+						margin: 10px 0 10px 12px;
+						height: 27px;
+						margin-bottom: 25px;
+					}
 				}
+				
 				ul {
 					overflow: hidden;
 					li {

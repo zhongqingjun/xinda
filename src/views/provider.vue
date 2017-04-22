@@ -18,17 +18,11 @@
 				<div class='servearea'>
 					<div class="servetitle"><p>服务区域</p></div>
 					<div class="areaname">
-						<div class="area">
-							<select name="" id="">
-								<option value="北京">北京</option>
-							</select>
-							<select name="" id="">
-								<option value="北京市">北京市</option>
-							</select>
-							<select name="" id="">
-								<option value="海淀区">海淀区</option>
-							</select>
-						</div>
+						<v-distpicker class="area">
+							<select name="" id=""></select>
+							<select name="" id=""></select>
+							<select name="" id=""></select>
+						</v-distpicker>
 					</div>
 				</div>
 			</div>
@@ -69,6 +63,7 @@
 
 <script type="text/javascript">
 	import axios from 'axios'
+	import Distpicker from 'v-distpicker'
 	export default {
 		created(){
 
@@ -124,7 +119,7 @@
 			// 	})
 			// 	// console.log(proone)
 			// }
-			
+
 		}
 	}
 </script>
@@ -134,7 +129,7 @@
 
 
 
-<style lang='less' scope>
+<style lang='less' scoped>
 	.body-provider {
 		width: 1200px;
 		margin: 0 auto;
@@ -156,21 +151,22 @@
 					padding: 12px 0;
 					text-align: center;
 					font-size: 17px;
-					font-weight: 600;
+					font-weight: 700;
 					width: 98px;
 					float: left;
+					border: none;
 					p {
-						margin: auto;
+						margin: 0 auto;
 					}
 				}
 				.servetype {
 					font-size: 14px;
 					overflow: hidden;
-					border: 1px solid #ccc;
-					margin: auto;
+					border-right: 1px solid #ccc;
+					/*margin: auto;*/
 					.typenum {
 						border-left: 1px solid #ccc;
-						padding: 12px 0;
+						padding: 14px 0;
 						float: left;
 						.typenum-span {
 							background: #2693d4;
@@ -186,14 +182,12 @@
 				.typecontent {
 					font-size: 14px;
 					overflow: hidden;
-					
-					border-right: 1px solid #ccc;
 					.contentnum {
-						padding: 12px;
-						width: 823px;
+						padding: 14px;
+						width: 818px;
 						float: left;
 						overflow: hidden;
-						
+						border-left: 1px solid #ccc;
 						.contentnum-span {
 							background: #2693d4;
 							border-radius:6px;
@@ -220,12 +214,14 @@
 					.areaname {
 						padding: 12px 0;
 						float: left;
+						border-left: 1px solid #ccc;
 						.area {
 							margin-left: 29px;
 			
 							select {
 								height: 23px;
-								width: 75px;
+								/*width: 75px;*/
+								padding: 0;
 								border: 1px solid #ccc;
 							}
 						}
