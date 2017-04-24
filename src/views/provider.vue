@@ -2,7 +2,7 @@
 	<div class="body-provider">
 		<div class="body-top"><p>首页/公司工商</p></div>
 		<div class="body-left">
-			<div class='product-title'>
+			<div class='povider-title'>
 				<div class="servetype">
 					<div class="servetitle"><p>服务分类</p></div>
 					<div class="typenum">
@@ -19,14 +19,14 @@
 					<div class="servetitle"><p>服务区域</p></div>
 					<div class="areaname">
 						<v-distpicker class="area">
-							<select ></select>
-							<select ></select>
-							<select ></select>
+							<select name="" id=""></select>
+							<select name="" id=""></select>
+							<select name="" id=""></select>
 						</v-distpicker>
 					</div>
 				</div>
 			</div>
-			<div class="product-content">
+			<div class="povider-content">
 				<div class="column">
 					<div class="column-menu">
 						<dd>综合排序</dd>
@@ -56,8 +56,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="body-right">q</div>
-		
+		<div class="body-right">
+			<ul>
+				<li><img src="../assets/images/detail-rt-1.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-2.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-3.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-4.png" alt="" /><p>平台担保</p></li>
+			</ul>
+		</div>
 	</div>
 </template>
 
@@ -143,7 +149,7 @@
 		.body-left {
 			float: left;
 			width: 948px;
-			.product-title {
+			.povider-title {
 				background: #f7f7f7;
 				.servetitle {
 					height: 100%;
@@ -162,26 +168,30 @@
 				.servetype {
 					font-size: 14px;
 					overflow: hidden;
-					border-right: 1px solid #ccc;
+					border: 1px solid #ccc;
 					/*margin: auto;*/
 					.typenum {
 						border-left: 1px solid #ccc;
-						padding: 14px 0;
+						padding: 15px 0;
 						float: left;
 						.typenum-span {
 							background: #2693d4;
 							border-radius:6px;
 							color: #fff;
+							cursor: pointer;
 						}
 						span {
 							margin-left: 17px;
 							padding: 6px 12px;
+							cursor: pointer;
 						}
 					}
 				}
 				.typecontent {
 					font-size: 14px;
 					overflow: hidden;
+					border-left: 1px solid #ccc;
+					border-right: 1px solid #ccc;
 					.contentnum {
 						padding: 14px;
 						width: 818px;
@@ -194,7 +204,6 @@
 							color: #fff;
 							display: block;
 							float: left;
-							
 						}
 						p {
 							float: left;
@@ -228,7 +237,7 @@
 					}
 				}
 			}
-			.product-content {
+			.povider-content {
 				margin-top: 25px;
 				border: 1px solid #CCCCCC;
 				.column {
@@ -270,24 +279,84 @@
 					.merchandise-text {
 						width: 630px;
 						float: left;
-						margin-left: 11px;
+						margin: 11px 0 0 11px;
+						h4 {
+							display: block;
+							font-size: 16px;
+							height: 36px;
+							line-height: 36px;
+							color: #333;
+						}
+						p {
+							font-size: 14px;
+							color: #999;
+							width: 620px;
+							height: 30px;
+							line-height: 30px;
+							overflow: hidden;
+						}
+						span {
+							font-weight: normal;
+							margin-top: 10px;
+							display: inline-block;
+							margin-right: 50px;
+							font-size: 14px;
+						}
 						
 					}
 					.merchandise-price {
 						float: left;
 						overflow: hidden;
+						margin-top: 15px;
+						p {
+							height: 40px;
+							line-height: 40px;
+							color: #ff3e3e;
+							font-size: 30px;
+							text-align: center;
+						}
 						div {
 							float: left;
+							span {
+								display: inline-block;
+								cursor: pointer;
+								width: 86px;
+								height: 24px;
+								line-height: 24px;
+								text-align: center;
+								background-color: #39a4dd;
+								margin-top: 15px;
+								color: #fff;
+								border-radius: 2px;
+								font-size: 14px;
+							}
 						}
 					}
 				}
 			}
 		}
 		.body-right {
-			/*border: 1px solid #ccc;*/
+			border: 1px solid #ccc;
 			margin-left: 10px;
 			float: left;
-			width: 238px;
+			width: 234px;
+			ul {
+				padding: 0px 10px;
+				li {
+					cursor: pointer;
+					padding: 10px 0px;
+					height: 178;
+   					text-align: center;
+   					border-bottom: 1px solid #ccc;
+   					p {
+   						display: block;
+						width: 100%;
+						line-height: 48px;
+						font-weight: bold;
+						font-size: 18px;
+   					}
+				}
+			}
 		}
 	}
 </style>
