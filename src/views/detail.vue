@@ -120,7 +120,7 @@
 	}
 </script>
 
-<style lang='less' scope>
+<style lang='less' scoped>
 	.body-provider {
 		width: 1200px;
 		margin: 0 auto;

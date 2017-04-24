@@ -169,7 +169,7 @@
 
 
 
-<style lang='less' scope>
+<style lang='less' scoped>
 	.body {
 		.title {
 			width: 100%;

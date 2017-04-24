@@ -2,7 +2,7 @@
 	<div class="body-provider">
 		<div class="body-top"><p>首页/公司工商</p></div>
 		<div class="body-left">
-			<div class='product-title'>
+			<div class='povider-title'>
 				<div class="servetype">
 					<div class="servetitle"><p>服务分类</p></div>
 					<div class="typenum">
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="product-content">
+			<div class="povider-content">
 				<div class="column">
 					<div class="column-menu">
 						<dd>综合排序</dd>
@@ -56,8 +56,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="body-right">q</div>
-		
+		<div class="body-right">
+			<ul>
+				<li><img src="../assets/images/detail-rt-1.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-2.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-3.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-4.png" alt="" /><p>平台担保</p></li>
+			</ul>
+		</div>
 	</div>
 </template>
 
@@ -143,7 +149,7 @@
 		.body-left {
 			float: left;
 			width: 948px;
-			.product-title {
+			.povider-title {
 				background: #f7f7f7;
 				.servetitle {
 					height: 100%;
@@ -162,7 +168,7 @@
 				.servetype {
 					font-size: 14px;
 					overflow: hidden;
-					border-right: 1px solid #ccc;
+					border: 1px solid #ccc;
 					/*margin: auto;*/
 					.typenum {
 						border-left: 1px solid #ccc;
@@ -184,6 +190,8 @@
 				.typecontent {
 					font-size: 14px;
 					overflow: hidden;
+					border-left: 1px solid #ccc;
+					border-right: 1px solid #ccc;
 					.contentnum {
 						padding: 14px;
 						width: 818px;
@@ -229,7 +237,7 @@
 					}
 				}
 			}
-			.product-content {
+			.povider-content {
 				margin-top: 25px;
 				border: 1px solid #CCCCCC;
 				.column {
@@ -327,10 +335,27 @@
 			}
 		}
 		.body-right {
-			/*border: 1px solid #ccc;*/
+			border: 1px solid #ccc;
 			margin-left: 10px;
 			float: left;
-			width: 238px;
+			width: 234px;
+			ul {
+				padding: 0px 10px;
+				li {
+					cursor: pointer;
+					padding: 10px 0px;
+					height: 178;
+   					text-align: center;
+   					border-bottom: 1px solid #ccc;
+   					p {
+   						display: block;
+						width: 100%;
+						line-height: 48px;
+						font-weight: bold;
+						font-size: 18px;
+   					}
+				}
+			}
 		}
 	}
 </style>

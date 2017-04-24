@@ -46,7 +46,7 @@
 				</div>
 				<div class="merchandise" v-for='proone in productfind' @click='merchandiseone(proone)'>
 					<div class="merchandise-img">
-						<img :src='"http://115.182.107.203:8088/xinda/pic"+proone.providerImg+".png"'>
+						<img :src='"/xinda-api/"+proone.providerImg+".png"'>
 					</div>
 					<div class="merchandise-text">
 						<h4>{{proone.serviceName}}</h4>
@@ -64,8 +64,20 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="body-right">q</div>
 
+=======
+		<div class="body-right">
+			<ul>
+				<li><img src="../assets/images/detail-rt-1.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-2.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-3.png" alt="" /><p>平台担保</p></li>
+				<li><img src="../assets/images/detail-rt-4.png" alt="" /><p>平台担保</p></li>
+			</ul>
+		</div>
+		
+>>>>>>> 75e7f127d75cb8518f93d07487421cdfb5f3f3a1
 	</div>
 </template>
 
@@ -338,10 +350,27 @@
 			}
 		}
 		.body-right {
-			/*border: 1px solid #ccc;*/
+			border: 1px solid #ccc;
 			margin-left: 10px;
 			float: left;
-			width: 238px;
+			width: 234px;
+			ul {
+				padding: 0px 10px;
+				li {
+					padding: 10px 0px;
+					height: 178;
+   					text-align: center;
+   					border-bottom: 1px solid #ccc;
+					cursor: pointer;
+   					p {
+   						display: block;
+						width: 100%;
+						line-height: 48px;
+						font-weight: bold;
+						font-size: 18px;
+   					}
+				}
+			}
 		}
 	}
 </style>
