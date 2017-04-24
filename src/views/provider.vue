@@ -172,10 +172,12 @@
 							background: #2693d4;
 							border-radius:6px;
 							color: #fff;
+							cursor: pointer;
 						}
 						span {
 							margin-left: 17px;
 							padding: 6px 12px;
+							cursor: pointer;
 						}
 					}
 				}
@@ -194,7 +196,6 @@
 							color: #fff;
 							display: block;
 							float: left;
-							
 						}
 						p {
 							float: left;
@@ -271,13 +272,55 @@
 						width: 630px;
 						float: left;
 						margin-left: 11px;
+						h4 {
+							display: block;
+							font-size: 16px;
+							height: 36px;
+							line-height: 36px;
+							color: #333;
+						}
+						p {
+							font-size: 14px;
+							color: #999;
+							width: 620px;
+							height: 30px;
+							line-height: 30px;
+							overflow: hidden;
+						}
+						span {
+							font-weight: normal;
+							margin-top: 10px;
+							display: inline-block;
+							margin-right: 50px;
+							font-size: 14px;
+						}
 						
 					}
 					.merchandise-price {
 						float: left;
 						overflow: hidden;
+						p {
+							height: 40px;
+							line-height: 40px;
+							color: #ff3e3e;
+							font-size: 30px;
+							text-align: center;
+						}
 						div {
 							float: left;
+							span {
+								display: inline-block;
+								cursor: pointer;
+								width: 86px;
+								height: 24px;
+								line-height: 24px;
+								text-align: center;
+								background-color: #39a4dd;
+								margin-top: 15px;
+								color: #fff;
+								border-radius: 2px;
+								font-size: 14px;
+							}
 						}
 					}
 				}
