@@ -29,4 +29,7 @@ export default {
   color: #000;
   text-decoration: none;
 }
+li{
+	list-style: none;
+}
 </style>

@@ -101,10 +101,10 @@
 	}
 </script>
 
-<style lang='less' scope>
+<style lang='less' scoped>
 	.index {
 		width: 100%;
-		height: 182px;
+		height: 174px;
 		border-bottom: 1px solid #2693d4;
 		.message {
 			width: 100%;
