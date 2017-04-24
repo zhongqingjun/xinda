@@ -31,22 +31,14 @@
 							<input type="text" v-model="newsyan" @focus="dtx"  @blur="dsq" placeholder="请输入短信验证码 "/>
 							<div @click="getnews" class="yan-pic">点击获取</div>
 						</div>
-						<select name="sheng">
-							<option value="">省</option>
-							<option value="">北京</option>
-							<option value="">天津</option>
-							<option value="">河北</option>
-						</select>
-						<select name="shi" class="shi">
-							<option value="">市</option>
-							<option value="">北京市</option>
-							<option value="">石家庄市</option>
-						</select>
-						<select name="qu" class="qu">
-							<option value="">区</option>
-							<option value="">海淀区</option>
-							<option value="">朝阳区</option>
-						</select>
+						<v-distpicker class="area">
+							<select name="sheng">
+							</select>
+							<select name="shi" class="shi">
+							</select>
+							<select name="qu" class="qu">
+							</select>
+						</v-distpicker>
 						<input type="text" v-model="mima" placeholder="请输入密码 "/>
 						<button class="quickly">立即注册</button>
 						<div class="tiaokuan">注册即同意遵守<span>《服务协议》</span></div>
@@ -65,7 +57,7 @@
 </template>
 <script>
 	import axios from 'axios'
-	
+	import Distpicker from 'v-distpicker'
 	export default {
 		data(){
 			return {
@@ -84,6 +76,7 @@
 			}
 		},
 		created() {
+			this.$parent.head=false;
 //			let self=this;
 //			let daoji=setInterval(function(){
 //							console.log(self.daojishi)
@@ -110,20 +103,20 @@
 				self.ysq();
 				if((!this.shouerror)&&(!this.shouerror2)&&(!this.yanerror)){
 					axios({
-					url:'/xinda-api/register/sendsms?cellphone='+this.phone+'&smsType=1&imgCode='+this.yanzhengma,
-				 	method:'post',
-					headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-				}).then(function(data){
-					//若获得验证码成功
-					if(data.status==1){
-						console.log("chenggong")
-					}else{
-					//获得验证码失败	
-						console.log("shibai")
-						self.yanerror1=true;
-						self.yanzhengshuaxin();
-					}
-				})
+						url:'/xinda-api/register/sendsms?cellphone='+this.phone+'&smsType=1&imgCode='+this.yanzhengma,
+					 	method:'post',
+						headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+					}).then(function(data){
+						//若获得验证码成功
+						if(data.status==1){
+							console.log("chenggong")
+						}else{
+						//获得验证码失败	
+							console.log("shibai")
+							self.yanerror1=true;
+							self.yanzhengshuaxin();
+						}
+					})
 				}
 			},
 			//手机号输入框获得焦点执行的函数

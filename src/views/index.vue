@@ -44,7 +44,8 @@
 			</div>
 			<div class="product">
 				<div class="productone"  v-for='product in products'>
-					<img :src='"http://115.182.107.203:8088/xinda/pic"+product.providerImg' alt="" />
+					<img src="../assets/images/products-06.png" alt="" />
+					
 					<h4>{{product.serviceName.replace("（","(").slice(0,product.serviceName.indexOf("（"))}}</h4>
 					<p>{{product.serviceInfo}}</p>
 					<p><span>{{product.price}}</span>{{product.unit}}/人</p>
@@ -57,7 +58,7 @@
 			</div>
 			<div class="essential">
 				<div class="essentialone"  v-for='hq in hqs'>
-					<img src="../assets/images/products-06.png" alt="" />
+					<img :src='"http://115.182.107.203:8088/xinda/pic"+hq.providerImg' alt="" />
 					<h4>{{hq.serviceName.replace("（","(").slice(0,hq.serviceName.indexOf("（"))}}</h4>
 					<p>{{hq.serviceInfo}}</p>
 					<p><span>{{hq.price}}</span>{{hq.unit}}/人</p>
@@ -98,17 +99,17 @@
 			</div>
 			<div class="service">
 				<div class="serviceone"  v-for='hq in hqs'>
-					<img src="../assets/images/products-06.png" alt="" />
+					<img :src='"http://115.182.107.203:8088/xinda/pic"+hq.providerImg' alt="" />
 					<h4>{{hq.serviceName}}</h4>
 					<p>{{hq.serviceInfo}}</p>
 					<p><span>{{hq.price}}</span>{{hq.unit}}/人</p>
 				</div>
-				<div class="serviceone"  v-for='hq in hqs'>
+				<!-- <div class="serviceone"  v-for='hq in hqs'>
 					<img src="../assets/images/products-06.png" alt="" />
 					<h4>{{hq.serviceName}}</h4>
 					<p>{{hq.serviceInfo}}</p>
 					<p><span>{{hq.price}}</span>{{hq.unit}}/人</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		
@@ -129,7 +130,7 @@
 	import axios from 'axios'
 	export default {
 		created(){
-			
+			this.$parent.head=true;
 		},
 		data(){
 			return{
@@ -169,7 +170,7 @@
 
 
 
-<style lang='less' scoped>
+<style lang='less' scope>
 	.body {
 		.title {
 			width: 100%;

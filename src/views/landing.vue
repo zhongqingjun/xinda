@@ -37,6 +37,18 @@
 		</div>
 	</div>
 </template>
+<script>
+	export default {
+		created(){
+			this.$parent.head=false;
+		},
+		data(){
+			return {
+				
+			}
+		},
+	}
+</script>
 <style lang="less" scoped>
 		.landing-g {
 			width: 100%;

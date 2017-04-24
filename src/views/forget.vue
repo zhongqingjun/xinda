@@ -35,7 +35,7 @@
 				<div class="content-right">
 					<div class="zhuce">
 						<h3>想起来密码？</h3>
-						<router-link to="/">返回登陆>></router-link>
+						<router-link to="/landing">返回登陆>></router-link>
 						<img src="../assets/images/renwu.jpg">	
 					</div>
 				</div>
@@ -43,6 +43,18 @@
 		</div>
 	</div>
 </template>
+<script>
+	export default {
+		created(){
+			this.$parent.head=false;
+		},
+		data(){
+			return {
+				
+			}
+		},
+	}
+</script>
 <style lang="less" scoped>
 		.landing-g {
 			width: 100%;

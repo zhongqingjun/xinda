@@ -2,14 +2,17 @@
 	<div class='index'>
 		<div class="message">
 			<div class="container">
-				<p class="topmsg-left">欢迎来到信达！<span class="landbtn">登录</span><span class="registerbtn">快速注册</span></p>
+				<p class="topmsg-left">欢迎来到信达！
+					<router-link to='landing'><span class="landbtn">登录</span></router-link>
+					<router-link to='register'><span class="registerbtn">快速注册</span></router-link>
+				</p>
 				<div class="topmsg-right">
 					<img src="../assets/images/cart.png" alt="cartico" />
 					<span class="cart">购物车<span class="cartnum">0</span>件<router-link to='./index'>服务商入口</router-link></span>
 				</div>
 			</div>
 		</div>
-		<div class='header'>
+		<div class='header' v-show='head'>
 			<div class="head-float">
 				<div class="logo">
 					<img src="../assets/images/logo.png" alt="信达logo" />
@@ -38,7 +41,7 @@
 				</div>
 			</div>	
 			<div class="navtop">
-				<div>全部产品</div>
+				<router-link to='/index'><div>全部产品</div></router-link>
 				<router-link to='/product'><div>财税服务</div></router-link>	 
 				<router-link to='/provider'><div>公司工商</div></router-link>
 				<router-link to='/joinus'><div>加盟我们</div></router-link>
@@ -76,7 +79,8 @@
 		data(){
 			return {
 				serveing:'',
-				show:"true"
+				show:"true",
+				head:'true'
 			}
 		},
 		methods:{
@@ -101,10 +105,10 @@
 	}
 </script>
 
-<style lang='less' scoped>
+<style lang='less' scope>
 	.index {
 		width: 100%;
-		height: 174px;
+		height: 182px;
 		border-bottom: 1px solid #2693d4;
 		.message {
 			width: 100%;
@@ -118,7 +122,7 @@
 					float: left;
 					line-height: 35px;
 					font-size: 14px;
-					span {
+					a {
 						margin-left: 10px;
 						color: #1abcff;
 					}
@@ -276,7 +280,7 @@
 			font-size: 16px;
 			width: 100%;
 			background: #f8f8f8;
-			margin-top: 100px;
+			/*margin-top: 100px;*/
 			.container {
 				width: 1200px;
 				margin: 0 auto;
